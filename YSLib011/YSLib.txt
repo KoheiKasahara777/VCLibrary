@@ -1,0 +1,48 @@
+=====================================================================
+					汎用グローバル関数ユニット Ver.0.10
+										2003.02.13 笹井 康晴
+=====================================================================
+
+
+【概要】
+　あると便利なグローバル関数をつめこんでいます。
+
+
+【インストール】
+① YSLib.cppとYSLib.hをプロジェクトフォルダにコピーする。
+② プロジェクトにYSLib.cppとYSLib.hを追加。
+③ 使用したいユニットに『YSLib.h』をインクルード。
+
+
+【内容】
+◇ bool DirectoryExists( const CString dname )
+　指定ディレクトリ名が存在するかどうかのチェック。
+◇ bool FileExists( const CString fname )
+　指定ファイル名が存在するかどうかのチェック。
+◇ CString FloatToStr( const double val )
+　double値を文字列に変換。
+◇ CString IntToStr( const int val )
+　整数値を文字列に変換。
+◇ double StrToFloat( const CString val )
+　文字列をdouble値に変換。
+◇ int StrToInt( const CString val )
+　文字列を整数値に変換。
+◇ CString ExeNameGet( void )
+　自分（アプリケーション）のフルパスを取得。
+◇ int ApplicationYearGet( void )
+　自分（アプリケーション）のタイムスタンプの年を取得。
+◇ CString CopyrightStringGet( const int startyear )
+　著作権文字列を取得。
+	例）	startyear = 2003でexeタイムスタンプが2003年	→ "Copyright(c) 2003 OHT Inc."
+			startyear = 2001でexeタイムスタンプが2003年 → "Copyright(c) 2001-2003 OHT Inc."
+◇ void MinMaxCheck( const xxxx min, xxxx& value, const xxxx max )
+　指定変数が最小値～最大値内に収まっていなければ矯正する。
+
+
+【更新情報】
+2003.02.13	Ver.0.10	初期作成
+2003.02.19	Ver.0.11	ExeNameGet, ApplicationYearGet, CopyrightStringGet, MinMaxCheck追加
+
+
+【サンプル】
+　ありません。

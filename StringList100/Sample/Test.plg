@@ -1,0 +1,27 @@
+<html>
+<body>
+<pre>
+<h1>ﾋﾞﾙﾄﾞのﾛｸﾞ</h1>
+<h3>
+--------------------構成: Test - Win32 Debug--------------------
+</h3>
+<h3>ｺﾏﾝﾄﾞ ﾗｲﾝ</h3>
+一時ﾌｧｲﾙ "C:\DOCUME~1\Ya_Sasai\LOCALS~1\Temp\RSP114.tmp" を作成し、次の内容を記録します
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /I "c:\fast_vl\include" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/Test.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"Q:\VCTest\Test.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Ya_Sasai\LOCALS~1\Temp\RSP114.tmp" 
+ｺﾏﾝﾄﾞ ﾗｲﾝ "link.exe /nologo /subsystem:console /incremental:yes /pdb:"Debug/Test.pdb" /debug /machine:I386 /out:"Debug/Test.exe" /pdbtype:sept /libpath:"C:\FAST_VL\Lib"  .\Debug\StdAfx.obj .\Debug\Test.obj .\Debug\StringList.obj " の作成中
+<h3>ｱｳﾄﾌﾟｯﾄ ｳｨﾝﾄﾞｳ</h3>
+ｺﾝﾊﾟｲﾙ中...
+Test.cpp
+ﾘﾝｸ中...
+
+
+
+<h3>結果</h3>
+Test.exe - ｴﾗｰ 0、警告 0
+</pre>
+</body>
+</html>

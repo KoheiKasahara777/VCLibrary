@@ -1,0 +1,64 @@
+=====================================================================
+					文字列リストクラス Ver.1.00
+										2003.02.13 笹井 康晴
+=====================================================================
+
+
+【概要】
+　このクラスは、文字列リストを扱ううえで便利な機能を追加したモノです。
+MFCにある『CStringList』の継承クラスとなっており、機能的にはDelphi・
+C++Builderの『TStringList』を真似ていますが完全なコピーではなく、必要
+最小限のサブセットとなっています。
+
+
+【特徴】
+・テキストファイルをまるごと読み込む機能がある（LoadFromFile関数）。
+・テキストファイルにまるごと書き込む機能がある（SaveToFile関数）。
+・各行のデータアクセスが容易（Itemsプロパティ）
+・『Key=Value』形式の文字列対応（Keyプロパティ・Valuesプロパティ等）。
+
+
+【インストール】
+① StringList.cppとStringList.hをプロジェクトフォルダにコピーする。
+② プロジェクトにStringList.cppとStringList.hを追加。
+③ 使用したいユニットに『StringList.h』をインクルード。
+
+
+【関数】
+◇ void Clear( void )
+　文字列全体を初期化。ゼロ行にする。
+◇ bool LoadFromFile( const CString )
+　指定ファイルを自身に読み込む。
+◇ bool SaveToFile( const CString );
+　自身の文字列を指定ファイルに書き出す。
+◇ int Add( const CString )
+　指定文字列を最終行に追加する。
+◇ void Delete( const int )
+　指定行番号の文字列を削除する。
+◇ void Assign( TStringList* )
+　内容の丸ごとコピー。
+◇ bool KeyExists( const CString )
+　指定キー名が存在するかどうかチェック。
+◇ bool IdentExists( const CString )
+　同上
+◇ void DeleteValue( const CString )
+　指定キー名の行を削除する。
+
+
+【プロパティ】
+◇ CString Items[]
+　指定行文字列の取得および代入。
+◇ CString Key[]
+　指定行キー名の取得および代入。
+◇ CString Ident[]
+　同上。
+◇ CString Value[]
+　指定キー名に対応した文字列の取得および代入。
+
+
+【更新情報】
+2003.02.13	Ver.1.00	初期作成
+
+
+【サンプル】
+　Sampleフォルダの中にサンプルプロジェクトがあります。

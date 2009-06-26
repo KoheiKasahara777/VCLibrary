@@ -1,0 +1,79 @@
+=====================================================================
+					Iniファイルアクセスクラス Ver.1.00
+										2003.02.13 笹井 康晴
+=====================================================================
+
+
+【概要】
+　このクラスは、Iniファイルアクセスを容易にしたクラスライブラリです。
+通常の数値読み書きに加え、あると便利な型の読み書きにも対応してますが、
+最重要ポイントは『64Kバイトを超えるIniファイルの読み書きが可能』という
+点です。
+※）要TStringListクラス
+
+
+【特徴】
+・64Kバイト超のIniファイルの読み書きが可能。
+・多数の型の読み書きに対応した関数を用意（bool, double, int, CPoint, CRect, CString, TStringList）
+
+
+【インストール】
+① YSIniFiles.cppとYSIniFiles.hをプロジェクトフォルダにコピーする。
+② StringList.cppとStringList.hもプロジェクトフォルダにコピー（TYSIniSectionクラスがTStringListの派生クラスのため）
+② プロジェクトにYSIniFiles.cppとYSIniFiles.hを追加。StringList.cpp・StringList.hも追加。
+③ 使用したいユニットに『YSIniFiles.h』をインクルード。
+
+
+【関数】
+◇ void Clear( void )
+　全初期化処理。全体を初期化。ゼロ行にする。
+◇ void DeleteKey( const CString, const CString )
+　指定セクションの指定キー名の値を削除する。
+◇ void EraseSection( const CString )
+　指定セクションを削除する。
+◇ bool ReadBool( const CString, const CString, const bool )
+◇ void WriteBool( const CString, const CString, const bool )
+　Bool値の読み書き。
+◇ double ReadFloat( const CString, const CString, const double )
+◇ void WriteFloat( const CString, const CString, const double )
+　浮動小数点値の読み書き。
+◇ int ReadInteger( const CString, const CString, const int )
+◇ void WriteInteger( const CString, const CString, const int )
+　整数値の読み書き。
+◇ CPoint ReadPoint( const CString, const CString, const CPoint* point = NULL )
+◇ void WritePoint( const CString, const CString, const CPoint& )
+　座標構造体の読み書き。
+◇ CRect ReadRect( const CString, const CString, const CRect* rect = NULL )
+◇ void WriteRect( const CString, const CString, const CRect& )
+　矩形情報構造体の読み書き。
+◇ CString ReadString( const CString, const CString, const CString )
+◇ void WriteString( const CString, const CString, const CString )
+　文字列の読み書き。
+◇ int ReadStringList( const CString, const CString, TStringList& )
+◇ void WriteStringList( const CString, const CString, TStringList& )
+　文字列リストクラスの読み書き。
+◇ int SectionIndex( const CString )
+　指定セクション名の位置を取得する。
+◇ bool SectionExists( const CString )
+　指定セクション名が存在するかどうかを調べる。
+★ bool UpdateFile( void )
+　メモリ内の内容をファイルに書き込む（★★★データ書き込み時の最後に必ず必用★★★）。
+◇ bool ValueExists( const CString, const CString )
+　指定セクション名の中の指定キー名が存在するかどうか調べる。
+
+
+【プロパティ】
+◇ CString FileName
+　Iniファイル名
+◇ TYSIniSection* Items[]
+　セクションクラス。
+◇ int Count
+　セクション数
+
+
+【更新情報】
+2003.02.13	Ver.1.00	初期作成
+
+
+【サンプル】
+　Sampleフォルダの中にサンプルプロジェクトがあります。

@@ -201,11 +201,8 @@ double StrToFloat( const CString val )
 
 /*=============================================================================
 *NAME		:StrToInt
-			:
 *MODULE		:YSLib.cpp
-			:
 *FUNCTION	:文字列→int変換処理関数です
-			:
 *PROCESS	:・文字列→int変換処理です。
 			:
 *INPUT		:const CString val	:文字列
@@ -229,11 +226,8 @@ int StrToInt( const CString val )
 
 /*=============================================================================
 *NAME		:ExeNameGet
-			:
 *MODULE		:MainFrm.cpp
-			:
 *FUNCTION	:アプリケーション名取得処理関数です
-			:
 *PROGRAMMED	:Y.Sasai
 *HISTORY	:
 *ID -- DATE ------- NOTE ------------------------------------------------------
@@ -253,11 +247,8 @@ CString ExeNameGet( void )
 
 /*=============================================================================
 *NAME		:ApplicationYearGet
-			:
 *MODULE		:YSLib.cpp
-			:
 *FUNCTION	:アプリケーション年取得処理関数です
-			:
 *PROCESS	:・アプリケーション年取得処理です。
 			:
 *RETURN		:アプリケーションの年
@@ -288,9 +279,7 @@ int ApplicationYearGet( void )
 
 /*=============================================================================
 *NAME		:CopyrightStringGet
-			:
 *MODULE		:MainFrm.cpp
-			:
 *FUNCTION	:著作権文字列取得処理関数です
 			:
 *PROGRAMMED	:Y.Sasai
@@ -317,11 +306,8 @@ CString CopyrightStringGet( const int startyear )
 
 /*=============================================================================
 *NAME		:MinMaxCheck
-			:
 *MODULE		:YSLib.cpp
-			:
 *FUNCTION	:最小値・最大値チェック処理関数です
-			:
 *PROCESS	:・範囲外の場合は範囲内におさめます。
 			:
 *PROGRAMMED	:Y.Sasai
@@ -341,11 +327,8 @@ void MinMaxCheck( const int min, int& value, const int max )
 
 /*=============================================================================
 *NAME		:MinMaxCheck
-			:
 *MODULE		:YSLib.cpp
-			:
 *FUNCTION	:最小値・最大値チェック処理関数です
-			:
 *PROCESS	:・範囲外の場合は範囲内におさめます。
 			:
 *PROGRAMMED	:Y.Sasai

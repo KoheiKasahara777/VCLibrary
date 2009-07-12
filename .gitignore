@@ -1,0 +1,13 @@
+*.~*
+*.bak
+*.dsk
+*.dcu
+*.obj
+*.dsm
+*.hpp
+*.log
+*.obj
+*.dcu
+*.identcache
+*.local
+__history
